@@ -19,6 +19,8 @@ def calc_corrcoef_from_standardized_input(array1,array2):
     '''Calculates Pearson correlation coefficient from two arrays in standard units
     INPUT: array1, array2: In standard units
     OUTPUT: Pearson correlation coefficient'''
+    coefs = np.corrcoef(array1, array2)
+    return coefs[0][1]
 
 def get_regression_parameters(array1, array2):
     '''Calculates regression parameteres from two input arrays
