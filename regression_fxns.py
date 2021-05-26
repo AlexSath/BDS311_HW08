@@ -10,6 +10,8 @@ def make_standard_units(input_array):
     '''Converts input_array to standard_units, where data has mean 0 and standard deviation of 1
         INPUT: data array
         OUTPUT: array in standard units'''
+    #Content in this function is exactly the way I did mine, looks good -Sophie
+    
     sub_arr = input_array - np.mean(input_array)
     std_arr = sub_arr / np.std(input_array)
     return std_arr
@@ -19,6 +21,8 @@ def calc_corrcoef_from_standardized_input(array1,array2):
     '''Calculates Pearson correlation coefficient from two arrays in standard units
     INPUT: array1, array2: In standard units
     OUTPUT: Pearson correlation coefficient'''
+    #I wrote this function the same way we did in class, using np.mean, but this looks good -Sophie
+    
     coefs = np.corrcoef(array1, array2)
     return coefs[0][1]
 
